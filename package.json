@@ -1,0 +1,8 @@
+{
+  "name": "pishnevis",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A privacy-first Persian text cleaner with reviewable edits.",
+  "scripts": {"test": "node --test cleaner.test.js"},
+  "engines": {"node": ">=18"}
+}

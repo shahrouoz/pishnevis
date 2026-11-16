@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>پیش‌نویس — قبل از ارسال، یک بار مرور کن</title>
+  <meta name="description" content="ابزار آفلاین مرتب‌کردن متن فارسی با امکان قبول یا رد هر اصلاح. بدون ارسال متن به سرور.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <script src="cleaner.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="./" aria-label="پیش‌نویس، خانه"><span class="brand-icon">پـ</span> پیش‌نویس<span class="version">نسخهٔ ۱.۰</span></a><span class="private"><i></i> متن شما، فقط در مرورگر شما</span></header>
+    <main>
+      <section class="intro"><div><p class="eyebrow">یک مکث کوچک، قبل از انتشار</p><h1>حرفت همان.<br><span>متنت مرتب‌تر.</span></h1><p class="lead">فاصله‌های اضافه، حروف عربی و نشانه‌ها را مرور کن.<br>هر تغییر با انتخاب خودت؛ بدون دست‌بردن به لحن تو.</p></div><div class="stamp" aria-hidden="true"><span>از شلوغی به سادگی</span><div><s>مي روم</s><b>می‌روم</b></div><span>یک تغییر کوچک، یک متن بهتر ↗</span></div></section>
+      <section class="workspace" aria-label="ویرایشگر متن فارسی">
+        <div class="toolbar"><span class="step"><b>۰۱</b> متن را وارد کن</span><button id="sample" class="quiet">امتحان با متن نمونه ↙</button></div>
+        <div class="editors">
+          <div class="pane"><div class="pane-heading"><label for="source">متن اولیه</label><span id="count">۰ نویسه</span></div><textarea id="source" spellcheck="false" placeholder="متنت را اینجا بنویس یا بچسبان…" aria-describedby="privacy-note"></textarea><div class="pane-foot"><span>کپشن، مقاله، پیام یا توضیح محصول</span><button id="clear" class="quiet">پاک‌کردن</button></div></div>
+          <div class="pane result-pane"><div class="pane-heading"><label for="result">نسخهٔ مرتب‌شده <span class="live-badge">زنده</span></label><span id="applied">۰ اصلاح</span></div><textarea id="result" readonly placeholder="نسخهٔ مرورشده، اینجا ظاهر می‌شود…" aria-label="نسخه مرتب‌شده"></textarea><div class="pane-foot"><span id="result-hint">آماده برای یک شروع تمیز</span><button id="copy" class="copy" disabled>کپی متن <span aria-hidden="true">↗</span></button></div></div>
+        </div>
+        <div class="options"><label for="digits">شکل اعداد</label><select id="digits"><option value="keep">بدون تغییر</option><option value="fa">فارسی · ۱۲۳</option><option value="en">انگلیسی · 123</option></select><span class="option-note">خط‌های جدید و ساختار پاراگراف‌ها حفظ می‌شوند.</span></div>
+      </section>
+      <section class="review" aria-labelledby="review-title"><div class="review-top"><div><p class="eyebrow">فرمان دست توست</p><h2 id="review-title">ریزِ تغییرات <span id="total">۰</span></h2></div><div class="review-actions"><button id="accept-all" class="quiet">قبول همه</button><button id="reject-all" class="quiet">رد همه</button></div></div><p class="review-note">اصلاح‌ها در ابتدا انتخاب شده‌اند. برای نگه‌داشتن شکل اصلی، تیک همان مورد را بردار.</p><div id="changes" class="changes"><div class="empty"><span aria-hidden="true">✦</span><p>هر متن، جای بهترشدن دارد.</p><small>متنت را وارد کن تا پیشنهادها را اینجا ببینی.</small></div></div></section>
+      <aside class="notice"><span aria-hidden="true">↳</span><p>پیش‌نویس غلط‌یاب هوشمند نیست؛ چند قانون مشخص را بررسی می‌کند. پیشنهادهای نیم‌فاصله محدودند و بهتر است با توجه به جمله مرور شوند. پس از قبول تغییرها، می‌توانی خروجی را دوباره بررسی کنی.</p><button id="again" class="quiet" disabled>مرور دوبارهٔ خروجی</button></aside>
+    </main>
+    <footer><span>با دقت نوشته شود.</span><p id="privacy-note">بدون حساب، بدون رهگیری، بدون ذخیرهٔ متن.</p><a href="https://github.com/shahrouoz" target="_blank" rel="noopener noreferrer">ساختهٔ Shahrooz ↗</a></footer>
+    <p id="status" role="status" aria-live="polite" class="toast"></p>
+  </div>
+</body>
+</html>
